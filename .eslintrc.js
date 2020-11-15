@@ -24,7 +24,7 @@ module.exports = {
     'object-curly-spacing': [ 1, 'always', { 'arraysInObjects': false, 'objectsInObjects': false } ],
     'prefer-const': 2,
     'no-alert': 'off',
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-console': 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'vue/no-dupe-keys': 'error',
     'vue/no-unused-vars': 2,
