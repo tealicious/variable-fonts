@@ -85,7 +85,7 @@
     }
   })
 </script>
-<style>
+<style lang="scss">
 body,
 body * {
   font-family: "Raleway", sans-serif !important;
@@ -93,6 +93,9 @@ body * {
 }
 h1 {
   font-size:40px;
+  @media (min-width:900px) {
+    font-size: 90px;
+  }
 }
 a._mts {
   display:inline-block;
