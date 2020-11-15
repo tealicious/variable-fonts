@@ -4,19 +4,24 @@
     class="_ptm">
     <div
       container>
-      <div  class="_text-center">
+      <div >
         <h1
-          id="title">
+          id="title"
+          class="_text-center _mbm">
           <span
             v-for="(char, idx) in titleAsArray"
             :key="idx">{{ char }}</span>
         </h1>
+        <p>This is a quick and dirty exploration of dynamic variable font styles, it will get out of sync over time, but the principal is the same as from the <a
+          href="http://charlielemaignan.com/"
+          target="_blank">example</a>. One key difference is that he's done his with a pure CSS solution while I'm leveraging Javascript. This might be for the best as it will resemble more closely the types of techniques you'll have to employ to do with a programming language-based solution.</p>
         <a
           href="https://fonts.google.com/?vfonly=true"
           target="_blank"
-          class="_mtm">
+          class="_mts">
           Free Variable Fonts from Google Fonts
         </a>
+        <br >
         <a
           href="https://web.dev/variable-fonts/"
           target="_blank"
@@ -85,8 +90,8 @@ body * {
   font-family: "Raleway", sans-serif !important;
   font-weight:400;
 }
-a {
-  display:block;
+a._mts {
+  display:inline-block;
 }
 a:hover {
   text-decoration: underline;
