@@ -19,25 +19,26 @@ Array.from(titleChildren).map((el, idx) => {
 
 function cycleFontWeight(el: HTMLElement, idx: number): void {
   if (!el) return 
+  const tick = 5
   setTimeout(
     () => {
       let cycle = 0
       setInterval(() => {
         const currentWeight = parseInt(el.style.fontWeight)
         if (cycle % 2 !== 0) {
-          if (currentWeight <= 201) {
+          if (currentWeight === 200 + tick) {
             cycle ++
           }
-          el.style.fontWeight = (currentWeight - 1).toString()
+          el.style.fontWeight = (currentWeight - tick).toString()
         } else {
-          if (currentWeight >= 899) {
+          if (currentWeight === 900 - tick) {
             cycle ++
           } 
-          el.style.fontWeight = (currentWeight + 1).toString()
+          el.style.fontWeight = (currentWeight + tick).toString()
         }
-      }, 1)
+      }, tick * 2)
     }, 
-    (idx + 1 ) * 300)
+    (idx + 1) * 150)
 }
   `
       }

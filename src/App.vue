@@ -7,7 +7,7 @@
       <div >
         <h1
           id="title"
-          class="_text-center _mbm">
+          class="_text-center _mbs">
           <span
             v-for="(char, idx) in titleAsArray"
             :key="idx">{{ char }}</span>
@@ -25,7 +25,7 @@
         <a
           href="https://web.dev/variable-fonts/"
           target="_blank"
-          class="_mts _mbm">
+          class="_mts">
           Introduction to variable fonts on the web
         </a>
       </div>
@@ -39,25 +39,26 @@
 
   function cycleFontWeight(el: HTMLElement, idx: number): void {
     if (!el) return 
+    const tick = 5
     setTimeout(
       () => {
         let cycle = 0
         setInterval(() => {
           const currentWeight = parseInt(el.style.fontWeight)
           if (cycle % 2 !== 0) {
-            if (currentWeight <= 201) {
+            if (currentWeight === 200 + tick) {
               cycle ++
             }
-            el.style.fontWeight = `${currentWeight - 1}`
+            el.style.fontWeight = (currentWeight - tick).toString()
           } else {
-            if (currentWeight >= 899) {
+            if (currentWeight === 900 - tick) {
               cycle ++
             } 
-            el.style.fontWeight = `${currentWeight + 1}`
+            el.style.fontWeight = (currentWeight + tick).toString()
           }
-        }, 1)
+        }, tick * 2)
       }, 
-      (idx + 1 ) * 300)
+      (idx + 1) * 150)
   }
 
   const title = 'Variable Fonts'
@@ -89,6 +90,9 @@ body,
 body * {
   font-family: "Raleway", sans-serif !important;
   font-weight:400;
+}
+h1 {
+  font-size:40px;
 }
 a._mts {
   display:inline-block;
