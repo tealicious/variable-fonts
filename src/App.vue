@@ -12,7 +12,7 @@
             v-for="(char, idx) in titleAsArray"
             :key="idx">{{ char }}</span>
         </h1>
-        <p>This is a quick and dirty exploration of dynamic variable font styles, it will get out of sync over time, but the principal is the same as from the <a
+        <p>This is a quick and dirty exploration of dynamic variable font styles, and it may get out of sync over time, but the principal is the same as from the <a
           href="http://charlielemaignan.com/"
           target="_blank">example</a>. One key difference is that he's done his with a pure CSS solution while I'm leveraging Javascript. This might be for the best as it will resemble more closely the types of techniques you'll have to employ with another programming language.</p>
         <a
