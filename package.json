@@ -10,7 +10,8 @@
   "dependencies": {
     "core-js": "^3.6.5",
     "fontfaceobserver": "^2.1.0",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "vue-code-highlight": "^0.7.8"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.33.0",

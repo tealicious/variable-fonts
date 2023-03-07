@@ -1,11 +1,22 @@
 <template>
-  <pre>
- {{codeSample}}
- </pre>
+  <vue-code-highlight language="typescript">
+    <pre>
+     {{codeSample}}
+    </pre>
+  </vue-code-highlight>
 </template>
 <script lang="ts">
   import Vue from 'vue'
+  //@ts-ignore
+  import { component as VueCodeHighlight } from 'vue-code-highlight'
+  import '../../node_modules/vue-code-highlight/themes/prism.css'
+  import 'prism-es6/components/prism-markup-templating'
+  import 'prism-es6/components/prism-typescript'
+
   export default Vue.extend({
+    components:{
+      VueCodeHighlight,
+    },
     data() {
       return {
         codeSample: `
