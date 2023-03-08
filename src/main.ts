@@ -4,18 +4,12 @@ const FontFaceObserver = require('fontfaceobserver')
 
 Vue.config.productionTip = false
 
-const fontRaleway = new FontFaceObserver('Raleway')
-fontRaleway.load().then(
-  function() {
-    console.log('Fonts loaded, then app as intended')
+const fontRSlab = new FontFaceObserver('Roboto Slab')
+const fontRMono = new FontFaceObserver('Roboto Mono')
+fontRSlab.load().then(function () {
+  fontRMono.load().then(function () {
     new Vue({
-      render: h => h(App)
+      render: (h) => h(App),
     }).$mount('#app')
-  },
-  function() {
-    console.log('App loaded before fonts could load')
-    new Vue({
-      render: h => h(App)
-    }).$mount('#app')
-  }
-)
+  })
+})

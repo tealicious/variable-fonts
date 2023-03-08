@@ -54,7 +54,7 @@
           }
           el.style.fontWeight = (currentWeight - tick).toString()
         } else {
-          if (currentWeight === 700 - tick) {
+          if (currentWeight === 900 - tick) {
             cycle++
           }
           el.style.fontWeight = (currentWeight + tick).toString()
